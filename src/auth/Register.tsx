@@ -38,7 +38,7 @@ export class Register extends Component<AcceptedProps, UserState> {
             fetch('http://localhost:3000/user/register', {
                 method: "POST",
                 body: JSON.stringify({
-                    userName: this.state.firstName,
+                    firstName: this.state.firstName,
                     lastName: this.state.lastName,
                     email: this.state.email,
                     password: this.state.password

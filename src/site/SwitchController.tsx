@@ -8,7 +8,7 @@ type ControllerProps = {
     updateUserRole: (newUserRole: string) => void;
     updateFirstName: (newFirstName: string) => void;
     protectedViews: () => void;
-    clearFirstName: () => void;
+    clearUser: () => void;
     sessionToken: any;
     firstName: string | null | undefined;
     userRole: string;

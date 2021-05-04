@@ -112,17 +112,17 @@ export default class BoardApp extends Component<{}, sessionState> {
           ) : (
             this.protectedViews()
           )}
-          {/* <SwitchController
+          <SwitchController
             updateSessionToken={this.updateSessionToken}
+            updateUserRole={this.updateUserRole}
             updateFirstName={this.updateFirstName}
+            protectedViews={this.protectedViews}
+            clearUser={this.clearUser}
             sessionToken={this.state.sessionToken}
             firstName={this.state.firstName}
             userRole={this.state.userRole}
-            protectedViews={this.protectedViews}
             userId={this.state.userId}
-            clearFirstName={this.clearFirstName}
-            updateUserRole:{this.updateUserRole}
-          /> */}
+          />
           {console.log('Bottom of App')}
         </Router>
             <Footer />
