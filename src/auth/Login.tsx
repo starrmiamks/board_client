@@ -24,14 +24,16 @@ export class Login extends Component<AcceptedProps, UserState>{
     handleSubmit = (e: any) => {
         if (this.state.email !== "" && this.state.password !== "") {
             e.preventDefault();
-            fetch('http://localhost:3000/user/register', {
+            fetch('http://localhost:3000/user/login', {
                 method: "POST",
                 headers: new Headers({
                     "Content-Type": "application/json",
                 }),
                 body: JSON.stringify({
-                    email: this.state.email,
-                    password: this.state.password,
+                    user: {
+                        email: this.state.email,
+                        password: this.state.password,
+                    }
                 }),
             })
                 .then((res) => {

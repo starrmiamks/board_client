@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Register } from './Register';
 import { Login } from './Login';
 import Button from '@material-ui/core/Button';
-// import Home from '../site/Home';
+import Home from '../site/Home';
 
 type AcceptedProps = {
     updateSessionToken: (newToken: string) => void;
@@ -50,7 +50,7 @@ export default class Auth extends Component<AcceptedProps, UserState> {
                     )}
                     <br />
                     <Button variant="outlined" onClick={(e) => {this.loginToggle(e)}}> {this.state.showLogin ? "Not a member yet? Sign up" : "Already a member? Login"}</Button>
-                    {/* <Home /> */}
+                    <Home />
                 </div>
             </div>
         );

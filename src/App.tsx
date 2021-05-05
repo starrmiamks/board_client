@@ -104,7 +104,7 @@ export default class BoardApp extends Component<{}, sessionState> {
     const session = localStorage.getItem('sessionToken');
     return (
       <div>
-          {/* <Home /> */}
+          <Home />
         <h2>Board</h2>
         <Router>
           {!session ? (

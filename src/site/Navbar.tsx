@@ -21,7 +21,10 @@ export class Navbar extends Component<AcceptedProps, {}> {
                 <h3>Welcome {this.props.firstName}</h3>
                 <Toolbar>
                     <Button>
-                        <Link to="/user/home">{''} User Home</Link>
+                        <Link to="/profile/">{''} Profile</Link>
+                    </Button>
+                    <Button onClick={this.props.clearUser}>
+                        <Link to='/user/register'>Logout</Link>
                     </Button>
                 </Toolbar>
             </div>

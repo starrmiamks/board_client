@@ -25,9 +25,30 @@ export class AdminNavbar extends Component<AcceptedProps, ValueTypes> {
                 <Button>
                     <Link to='/admin/home' >Admin Home</Link>
                 </Button>
+                <Button>
+                    <Link to='/admin/userTable'>
+                        User Management
+                    </Link>
+                </Button>
+                <Button>
+                    <Link to='/admin/entries'>
+                        Profile Entries
+                    </Link>
+                </Button>
+                <Button>
+                    <Link to='/admin/subscriptions'>
+                        Subscriptions
+                    </Link>
+                </Button>
+                <Button>
+                    <Link to='/user/register'>
+                        Logout
+                    </Link>
+                </Button>
+                {console.log('Admin Nav Footer')}
             </Toolbar>
             </div>
-        )
+        );
     }
 }
 

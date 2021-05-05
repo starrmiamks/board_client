@@ -38,10 +38,12 @@ export class Register extends Component<AcceptedProps, UserState> {
             fetch('http://localhost:3000/user/register', {
                 method: "POST",
                 body: JSON.stringify({
-                    firstName: this.state.firstName,
-                    lastName: this.state.lastName,
-                    email: this.state.email,
-                    password: this.state.password
+                    user: {
+                        firstName: this.state.firstName,
+                        lastName: this.state.lastName,
+                        email: this.state.email,
+                        password: this.state.password
+                    }
                 }),
                 headers: new Headers({
                     "Content-Type": "application/json",
@@ -50,7 +52,8 @@ export class Register extends Component<AcceptedProps, UserState> {
                 .then((response) => response.json())
                 .then((data) => {
                     this.props.updateSessionToken(data.updateSessionToken);
-                });
+                })
+                .catch((error) => console.log(error))
         } else {
             alert("Fields cannot be empty");
         }
