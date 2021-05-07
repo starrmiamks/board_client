@@ -4,7 +4,7 @@ import { Button, Toolbar } from "@material-ui/core";
 
 type ValueTypes = {};
 type AcceptedProps = {
-    clearUser: () => void; 
+    clearUser: () => void;
     firstName: string | null | undefined;
 };
 
@@ -13,40 +13,42 @@ export class AdminNavbar extends Component<AcceptedProps, ValueTypes> {
         super(props);
         this.state = {};
     }
-    render () {
+    render() {
         return (
             <div>
-                <div>
-                    <h3>AdminNavbar</h3>
-                    <h3>Welcome {this.props.firstName}</h3>
-                    <h5>What would you like to manage?</h5>
+                <div id='adminContainer'>
+                    <div style={{ display: 'block', justifyContent: 'flext-start'}} className='header'>
+                        <h3 className='header'>AdminNavbar</h3>
+                        <h3>Welcome {this.props.firstName}</h3>
+                        <h5>What would you like to manage?</h5>
+                    </div>
                 </div>
-            <Toolbar>
-                <Button>
-                    <Link to='/admin/home' >Admin Home</Link>
-                </Button>
-                <Button>
-                    <Link to='/admin/userTable'>
-                        User Management
+                <Toolbar style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <Button style={{ margin: '1rem 3rem' }}>
+                        <Link style={{ color: '#000000' }} to='/admin/home' >Admin Home</Link>
+                    </Button>
+                    <Button style={{ margin: '1rem 3rem' }}>
+                        <Link style={{ color: '#0000000' }} to='/admin/userTable'>
+                            User Management
                     </Link>
-                </Button>
-                <Button>
-                    <Link to='/admin/entries'>
-                        Profile Entries
+                    </Button>
+                    <Button style={{ margin: '1rem 3rem' }}>
+                        <Link style={{ color: '#000000'}} to='/admin/entries'>
+                            Profile Entries
                     </Link>
-                </Button>
-                <Button>
-                    <Link to='/admin/subscriptions'>
-                        Subscriptions
+                    </Button>
+                    <Button style={{ margin: '1rem 3rem' }}>
+                        <Link style={{ color: '#000000' }} to='/admin/subscriptions'>
+                            Subscriptions
                     </Link>
-                </Button>
-                <Button>
-                    <Link to='/user/register'>
-                        Logout
+                    </Button>
+                    <Button style={{ margin: '1rem 3rem'}} onClick={this.props.clearUser}>
+                        <Link style={{ color: '#000000' }} to='/user/register'>
+                            Logout
                     </Link>
-                </Button>
-                {console.log('Admin Nav Footer')}
-            </Toolbar>
+                    </Button>
+                    {console.log('Admin Nav Footer')}
+                </Toolbar>
             </div>
         );
     }

@@ -83,12 +83,14 @@ export default class AdminEditUser extends Component<AdminProps, UserState> {
             fetch(`http://localhost:3000/user/admin/${this.props.userId}`, {
                 method: 'PUT',
                 body: JSON.stringify({
-                    id: this.state.id,
-                    firstName: this.state.firstName,
-                    lastName: this.state.lastName,
-                    email: this.state.email,
-                    password: this.state.password,
-                    admin: this.state.admin,
+                    user: {
+                        id: this.state.id,
+                        firstName: this.state.firstName,
+                        lastName: this.state.lastName,
+                        email: this.state.email,
+                        password: this.state.password,
+                        admin: this.state.admin,
+                    }
                 }),
                 headers: new Headers({
                     'Content-Type': 'application/json',
@@ -155,7 +157,7 @@ export default class AdminEditUser extends Component<AdminProps, UserState> {
                         }}
                     />
                     <div>
-                        <Button onClick={(e) => {
+                        <Button variant='outlined' color='primary' onClick={(e) => {
                             this.handleSubmit(e);
                             console.log(`
                                 id: ${this.state.id},
@@ -172,7 +174,7 @@ export default class AdminEditUser extends Component<AdminProps, UserState> {
                             </Link>
                         </Button>
                         <Link to='/admin/userTable'>
-                            <Button value={this.state.id} onClick={(e) => {this.handleDelete(this.state.id);}}>
+                            <Button variant='outlined' color='primary' value={this.state.id} onClick={(e) => { this.handleDelete(this.state.id); }}>
                                 <DeleteIcon />
                                 Delete
                             </Button>

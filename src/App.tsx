@@ -86,6 +86,7 @@ export default class BoardApp extends Component<{}, sessionState> {
           updateSessionToken={this.updateSessionToken}
           updateUserRole={this.updateUserRole}
         />
+        
         <Home />
       </Route>
     );

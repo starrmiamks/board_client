@@ -13,7 +13,7 @@ export class Admin extends (Component)<AdminProps, {}> {
             <div>
                 <div>
                     <div>
-                        <div>
+                        <div style={{ width: '50%', display: 'block'}}>
                             <h5>Admin user functionality:</h5>
                             <ul>
                                 <li>See all users</li>
