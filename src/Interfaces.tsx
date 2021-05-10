@@ -11,3 +11,14 @@ export interface UserDetails {
     password: string;
     admin: string;
 }
+
+// export interface Prof {
+//     profile: ProfileDetails[];
+// }
+
+export interface ProfileDetails {
+    id: number;
+    picture: string;
+    title: string;
+    details: string;
+}

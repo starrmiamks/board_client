@@ -25,7 +25,7 @@ type UserDataState = {
 };
 const styles = {
     table: {
-        minWidth: 700,
+        minWidth: 650,
     },
 };
 

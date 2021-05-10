@@ -10,8 +10,8 @@ export class Admin extends (Component)<AdminProps, {}> {
 
     render () {
         return (
-            <div>
-                <div>
+            <div id='adminDiv'>
+                <div id='adminContainer'>
                     <div>
                         <div style={{ width: '50%', display: 'block'}}>
                             <h5>Admin user functionality:</h5>

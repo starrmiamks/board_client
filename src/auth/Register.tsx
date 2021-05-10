@@ -78,7 +78,7 @@ export class Register extends Component<AcceptedProps, UserState> {
     render() {
         return (
             <div>
-                <h1>Register</h1>
+                <h1>Welcome!</h1>
                 <ValidatorForm
                     ref="form"
                     onSubmit={this.handleSubmit}
@@ -124,7 +124,7 @@ export class Register extends Component<AcceptedProps, UserState> {
                         errorMessages={["Password must contain one number, one capital letter, and be at least 5 characters in length."]}
                     />
                     <br />
-                    <Button onClick={this.handleSubmit}>
+                    <Button variant='outlined' onClick={this.handleSubmit}>
                         Register
                     </Button>
                 </ValidatorForm>

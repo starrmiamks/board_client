@@ -89,7 +89,7 @@ export class Login extends Component<AcceptedProps, UserState>{
                         value={this.state.password}
                     />
                     <br />
-                    <Button onClick={this.handleSubmit}>
+                    <Button variant="outlined" onClick={this.handleSubmit}>
                         Login
                     </Button>
                 </ValidatorForm>

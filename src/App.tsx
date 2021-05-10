@@ -6,6 +6,7 @@ import Navbar from '../src/site/Navbar';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import Home from '../src/site/Home';
 import SwitchController from '../src/site/SwitchController';
+import RecipeReviewCard from '../src/components/Profile/ProfileCreate';
 
 type sessionState = {
   sessionToken: string | null;
@@ -106,6 +107,7 @@ export default class BoardApp extends Component<{}, sessionState> {
     return (
       <div>
           <Home />
+          {/* <RecipeReviewCard /> */}
         <h2>Board</h2>
         <Router>
           {!session ? (
